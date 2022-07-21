@@ -12,37 +12,38 @@ type FeatureItem = {
 // todo x: 首页内容
 const FeatureList: FeatureItem[] = [
   {
-    title: 'A better C',
+    title: 'Geek Clock',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Zig, 更好的 C, 替代 C 语言.
+        极客闹钟
+
         <br />
-        与 C 语言有极佳的互操作性, 可以直接 import c lib.
+        支持番茄🍅闹钟, 世界时钟, 灵活设置闹钟.
         <br />
-        FFI 操作体验极佳.
+        跨平台, 全平台支持(Windows/MacOS/Linux/iOS/Android)
       </>
     ),
   },
   {
-    title: '语法简单',
+    title: 'Geek Wallet',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        语法简单, 吸收 Rust/Go 大量优秀设计.
+        极客钱包
         <br />
-        语法噪音比 Rust 小.
+        非常智能的钱包
         <br />
-        无 GC, 避免 Go GC 问题.
+
       </>
     ),
   },
   {
-    title: 'IoT 生态',
+    title: 'Geek Mind',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        嵌入式, IoT 场景.
+        极客笔记工具
       </>
     ),
   },

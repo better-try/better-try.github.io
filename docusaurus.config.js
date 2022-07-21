@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Better Zig",
-  tagline: "better zig documentation",
-  url: "https://better-zig.github.io", // todo x: update
+  title: "Try Better App",
+  tagline: " 使用更好的 App",
+  url: "https://better-try.github.io", // todo x: update
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "better-zig", // todo x: Usually your GitHub org/user name.
-  projectName: "better-zig.github.io", // todo x: Usually your repo name.
+  organizationName: "better-try", // todo x: Usually your GitHub org/user name.
+  projectName: "better-try.github.io", // todo x: Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -60,9 +60,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Zig 学习", // todo x
+        title: "Try Better App", // todo x
         logo: {
-          alt: "Zig Logo",
+          alt: "Better App Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -120,7 +120,7 @@ const config = {
                 value: '<hr style="margin: 0.3rem 0;">',
               },
               {
-                href: "https://github.com/better-zig",
+                href: "https://github.com/better-try",
                 label: "Help Us Translate",
               },
             ],
@@ -142,10 +142,6 @@ const config = {
           {
             title: "Community",
             items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
               {
                 label: "Discord",
                 href: "https://discord.com/invite/MnDA9pfWAW",
