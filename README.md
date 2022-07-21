@@ -1,10 +1,11 @@
-# Zig 教程:
+# Better Try App:
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-### Zig 学习:
+### 官网:
 
-- https://better-zig.github.io/
+- https://better-try.github.io/
+- https://trybetter.app
 - ⭐⭐⭐⭐⭐
 
 ### reference:

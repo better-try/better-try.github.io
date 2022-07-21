@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Try Better App",
   tagline: " 使用更好的 App",
-  url: "https://better-try.github.io", // todo x: update
+  url: "https://trybetter.app", // todo x: update
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -105,7 +105,7 @@ const config = {
           { to: "/blog", label: "博客", position: "left" },
 
           {
-            href: "https://github.com/better-zig",
+            href: "https://github.com/better-try",
             label: "GitHub",
             position: "right",
           },
@@ -161,7 +161,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/better-zig", // todo x
+                href: "https://github.com/better-try", // todo x
               },
             ],
           },
