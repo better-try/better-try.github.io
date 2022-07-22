@@ -82,25 +82,54 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
+            sidebarId: "products",
+            label: "产品",
+          },
+
+          // todo x: 教程
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "downloads",
+            label: "下载",
+          },
+          // todo x: 教程
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "downloads",
+            label: "在线购买",
+          },
+
+          // todo x: 教程
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "downloads",
+            label: "密钥管理",
+          },
+
+          // todo x: 教程
+          {
+            type: "docSidebar",
+            position: "right",
+            sidebarId: "projects",
+            label: "开源项目",
+          },
+          {
+            type: "docSidebar",
+            position: "right",
             sidebarId: "guide",
-            label: "教程",
+            label: "使用文档",
           },
-
-          // todo x: 生态
+          // todo x: 教程
           {
             type: "docSidebar",
-            position: "left",
-            sidebarId: "ecosystem",
-            label: "生态",
+            position: "right",
+            sidebarId: "downloads",
+            label: "反馈",
           },
 
-          // todo x: 生态
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "annotated",
-            label: "源码分析",
-          },
           // TODO X: 博客
           { to: "/blog", label: "博客", position: "left" },
 

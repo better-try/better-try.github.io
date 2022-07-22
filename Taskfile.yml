@@ -3,7 +3,8 @@ version: 3
 tasks:
   dev:
     cmds:
-      - npm start
+      # - npm start
+      - yarn start
 
   deploy:
     cmds:
