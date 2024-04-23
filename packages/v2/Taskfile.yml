@@ -1,16 +1,6 @@
 version: "3"
 
 #
-# sub namespace: https://taskfile.dev/#/usage?id=including-other-taskfiles
-#
-includes:
-  landing:
-    aliases: [ "l", "lp" ]
-    taskfile: packages/landing-page
-    dir: packages/landing-page
-    optional: true
-
-#
 # global vars: https://taskfile.dev/#/usage?id=variables
 #
 vars:
@@ -63,12 +53,19 @@ tasks:
       - git init
       - git add -A
       - git commit -m 'deploy'
+#      - |
+#        cd ..;
+#        repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git " '{print "git@github.com:"$1".git"}'`;
+#        echo "git remote add $repo_url";
+#        cd .dist/;
+#        git remote add origin $repo_url
       - git remote add origin {{.GIT_REPO}}
-      - git branch -M gh1-pages
-      - git push -f origin gh1-pages
+      - git branch -M {{.BRANCH}}
+      - git push -f origin {{.BRANCH}}
     dir: .vitepress/dist/
     vars:
-      GIT_REPO: git@github.com:better-ts/vitepress-template.git
+      GIT_REPO: git@github.com:better-try/better-try.github.io.git
+      BRANCH: gh-pages
     ignore_error: true
 
   quick:
@@ -76,6 +73,7 @@ tasks:
     cmds:
       - task: build
       - task: deploy
+      - task: open
 
   clean:
     aliases: [ "cl", "rm" ]
@@ -90,3 +88,18 @@ tasks:
       - echo "deploy to {{ .GIT_REPO }} gh-pages"
     vars:
       GIT_REPO: git@github.com:better-ts/vitepress-template.git
+
+  fmt:
+    aliases: [ "fmt-repo-url" ]
+    cmds:
+      - |
+        repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git " '{print "git@github.com:"$1".git"}'`;
+        echo $repo_url; 
+
+  open:
+    aliases: [ "open-repo-url" ]
+    cmds:
+      - echo $(git remote -v | grep push | awk -F ":" '{print $2}')
+      - |
+        repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git " '{print "https://github.com/"$1}'`;
+        open $repo_url;
