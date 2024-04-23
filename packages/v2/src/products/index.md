@@ -4,8 +4,7 @@ layout: home
 
 hero:
   name: "My Awesome Products"
-
-  tagline: My great project tagline
+#  tagline: My great project tagline
 
 features:
   - icon: ⚡️

@@ -61,8 +61,9 @@ export const shared = defineConfig({
 
     //
     // todo x: logo
+    //  - 如果自定义了 src 路径, 需要把 public, 放在 src/public 下, 才是正确匹配的
     //
-    // logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
+    logo: { src: '/logo.svg', width: 24, height: 24 },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/better-try' },
