@@ -4,6 +4,7 @@ import type {Theme} from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import Layout from './Layout.vue'
+import naive from "naive-ui";
 
 export default {
 
@@ -19,5 +20,6 @@ export default {
   // },
   enhanceApp({app, router, siteData}) {
     // ...
+    app.use(naive)
   }
 } satisfies Theme

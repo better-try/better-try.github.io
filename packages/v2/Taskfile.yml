@@ -30,6 +30,7 @@ tasks:
       - bun add -D open-cli
       - bun add -D @lunariajs/core
       - bun add -D markdown-it-mathjax3
+      - bun add -D naive-ui
 
   run:
     aliases: [ "r" ]
@@ -95,7 +96,7 @@ tasks:
     cmds:
       - |
         repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git " '{print "git@github.com:"$1".git"}'`;
-        echo $repo_url; 
+        echo $repo_url;
 
   open:
     aliases: [ "open-repo-url" ]
