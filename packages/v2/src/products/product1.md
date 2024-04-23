@@ -10,3 +10,15 @@ layout: home
 - support Windows/macOS/Linux
 - support multiple blockchains
 - support multiple languages
+
+## Download
+
+<WDownload/>
+
+## Buy
+
+<WDownload/>
+
+<script setup>
+import WDownload from '../components/WDownload.vue'
+</script>
