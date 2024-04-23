@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress'
-import { search as zhSearch } from './zh'
-import { search as ptSearch } from './pt'
-import { search as ruSearch } from './ru'
+import {defineConfig} from 'vitepress'
+import {search as zhSearch} from './zh'
+import {search as ptSearch} from './pt'
+import {search as ruSearch} from './ru'
 
 export const shared = defineConfig({
   title: "TryBetterApp",
@@ -45,16 +45,16 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png' }],
-    ['meta', { name: 'theme-color', content: '#5f67ee' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'en' }],
-    ['meta', { property: 'og:title', content: 'VitePress | Vite & Vue Powered Static Site Generator' }],
-    ['meta', { property: 'og:site_name', content: 'VitePress' }],
-    ['meta', { property: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg' }],
-    ['meta', { property: 'og:url', content: 'https://vitepress.dev/' }],
-    ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
+    ['link', {rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg'}],
+    ['link', {rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png'}],
+    ['meta', {name: 'theme-color', content: '#5f67ee'}],
+    ['meta', {property: 'og:type', content: 'website'}],
+    ['meta', {property: 'og:locale', content: 'en'}],
+    ['meta', {property: 'og:title', content: 'VitePress | Vite & Vue Powered Static Site Generator'}],
+    ['meta', {property: 'og:site_name', content: 'VitePress'}],
+    ['meta', {property: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg'}],
+    ['meta', {property: 'og:url', content: 'https://vitepress.dev/'}],
+    ['script', {src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: ''}]
   ],
 
   themeConfig: {
@@ -63,13 +63,14 @@ export const shared = defineConfig({
     // todo x: logo
     //  - 如果自定义了 src 路径, 需要把 public, 放在 src/public 下, 才是正确匹配的
     //
-    logo: { src: '/logo.svg', width: 24, height: 24 },
+    logo: {src: '/logo.svg', width: 24, height: 24},
+
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/better-try' },
-      { icon: 'twitter', link: 'https://twitter.com/trybetterapp' },
-      { icon: 'discord', link: 'https://github.com/better-try' },
-      { icon: 'youtube', link: 'https://youtube.com/@trybetterapp' },
+      {icon: 'github', link: 'https://github.com/better-try'},
+      {icon: 'twitter', link: 'https://twitter.com/trybetterapp'},
+      {icon: 'discord', link: 'https://github.com/better-try'},
+      {icon: 'youtube', link: 'https://youtube.com/@trybetterapp'},
     ],
 
 
