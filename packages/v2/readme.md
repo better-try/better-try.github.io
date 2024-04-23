@@ -7,6 +7,13 @@
 - ✅ 支持 [markdown](https://vitepress.dev/zh/guide/markdown)
 - ✅ 支持 一键发布到 Github Pages
 
+## FAQ
+
+### Github Pages 绑定域名问题:
+
+- 绑定自定义域名, 无需设置 base_url(也就是 repo name)
+- 但是每次发布 github pages, 都需要手动在项目设置页里, 设置 `自定义域名`
+
 ## Development
 
 ### Requirements
