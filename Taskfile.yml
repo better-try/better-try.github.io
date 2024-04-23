@@ -9,10 +9,10 @@ includes:
     dir: packages/v1
     optional: true
 
-  landing:
+  v2:
     aliases: ["l", "lp"]
-    taskfile: packages/landing-page
-    dir: packages/landing-page
+    taskfile: packages/v2
+    dir: packages/v2
     optional: true
 
 #

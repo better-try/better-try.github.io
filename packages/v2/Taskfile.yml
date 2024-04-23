@@ -1,0 +1,92 @@
+version: "3"
+
+#
+# sub namespace: https://taskfile.dev/#/usage?id=including-other-taskfiles
+#
+includes:
+  landing:
+    aliases: [ "l", "lp" ]
+    taskfile: packages/landing-page
+    dir: packages/landing-page
+    optional: true
+
+#
+# global vars: https://taskfile.dev/#/usage?id=variables
+#
+vars:
+  VAR1: "some-var"
+
+# global env:
+env:
+  ENV1: testing
+
+
+################################################################################################
+
+tasks:
+  default:
+    cmds:
+      - echo "hello world"
+
+  install:
+    aliases: [ "i" ]
+    cmds:
+      - bun install
+
+  add:
+    aliases: [ "a" ]
+    cmds:
+      - bun add -D vitepress
+      - bun add -D open-cli
+      - bun add -D @lunariajs/core
+      - bun add -D markdown-it-mathjax3
+
+  run:
+    aliases: [ "r" ]
+    cmds:
+      - bun run dev
+
+  build:
+    aliases: [ "b" ]
+    cmds:
+      - bun run build
+
+  preview:
+    aliases: [ "p" ]
+    cmds:
+      - bun run preview
+
+  deploy:
+    aliases: [ "dp", "up", "upload" ]
+    cmds:
+      - echo "deploy to {{ .GIT_REPO }} gh-pages"
+      - git init
+      - git add -A
+      - git commit -m 'deploy'
+      - git remote add origin {{.GIT_REPO}}
+      - git branch -M gh1-pages
+      - git push -f origin gh1-pages
+    dir: .vitepress/dist/
+    vars:
+      GIT_REPO: git@github.com:better-ts/vitepress-template.git
+    ignore_error: true
+
+  quick:
+    aliases: [ "q" ]
+    cmds:
+      - task: build
+      - task: deploy
+
+  clean:
+    aliases: [ "cl", "rm" ]
+    cmds:
+      - rm -rf cache/
+      - rm -rf dist/
+    dir: .vitepress/
+
+
+  echo:
+    cmds:
+      - echo "deploy to {{ .GIT_REPO }} gh-pages"
+    vars:
+      GIT_REPO: git@github.com:better-ts/vitepress-template.git
