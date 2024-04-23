@@ -12,6 +12,7 @@ export const shared = defineConfig({
   //  - 坑: 必须以 / 开头 + 结尾
   //
   // base: '/vitepress-template/',
+  // base: '/better-try.github.io/',
 
   //
   // todo x: 入口
