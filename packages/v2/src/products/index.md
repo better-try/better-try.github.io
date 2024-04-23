@@ -11,15 +11,15 @@ features:
   - icon: 👛️
     title: Geek Wallet
     details: Awesome Wallet Application, support Windows/macOS/Linux
-    link: '/en/products/product1'
+    link: '/products/product1'
   - icon: ⏰
     title: Geek Clock
     details: Awesome Clock Application, support Windows/macOS/Linux
-    link: '/en/products/product2'
+    link: '/products/product2'
   - icon: 🛠️
     title: Visa Pal
     details: Awesome USA Visa Application, support Windows/macOS/Linux
-    link: '/en/products/product3'
+    link: '/products/product3'
 
 ---
 

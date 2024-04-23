@@ -12,8 +12,8 @@ export const en = defineConfig({
     nav: nav(),
 
     sidebar: {
-      '/en/guide/': {base: '/en/guide/', items: sidebarGuide()},
-      '/en/reference/': {base: '/en/reference/', items: sidebarReference()}
+      '/guide/': {base: '/guide/', items: sidebarGuide()},
+      '/reference/': {base: '/reference/', items: sidebarReference()}
     },
 
     editLink: {
@@ -31,12 +31,12 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "Products",
-      link: "/en/products/index",
-      activeMatch: '/en/products/'
+      link: "/products/index",
+      activeMatch: '/products/'
     },
     {
       text: 'Guide',
-      link: '/en/guide/index',
+      link: '/guide/index',
     },
     // {
     //   text: 'Reference',
@@ -71,7 +71,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'GeekClock',
       collapsed: false,
       items: [
-        {text: 'What is GeekClock?', base: '/en/guide/', link: 'product1/api-examples'},
+        {text: 'What is GeekClock?', base: '/guide/', link: 'product1/api-examples'},
 
       ]
     },
@@ -79,7 +79,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'VisaPal',
       collapsed: false,
       items: [
-        {text: 'What is VisaPal?', base: '/en/guide/', link: 'product2/markdown-examples'},
+        {text: 'What is VisaPal?', base: '/guide/', link: 'product2/markdown-examples'},
 
       ]
     },

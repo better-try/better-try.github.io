@@ -12,15 +12,15 @@ features:
   - icon: 👛️
     title: Geek Wallet
     details: Awesome Wallet Application
-    link: '/en/products/index'
+    link: '/products/index'
   - icon: ⏰
     title: Geek Clock
     details: Awesome Clock Application
-    link: '/en/products/index'
+    link: '/products/index'
   - icon: 🛠️
     title: Visa Pal
     details: Awesome USA Visa Application
-    link: '/en/products/index'
+    link: '/products/index'
 
 ---
 
