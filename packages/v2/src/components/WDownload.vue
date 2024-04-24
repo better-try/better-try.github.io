@@ -2,15 +2,23 @@
     <n-flex>
         <n-space>
             <n-card v-for="d in dw" :key="d" :title="d.title">
-                <n-button secondary size="large" strong type="success" @click="download(d.url)"
-                    >{{ d.dl }}
+                <n-flex vertical>
+                    <n-button secondary size="large" strong type="success" @click="download(d.url)"
+                        >{{ d.dl }}
 
-                    <template #icon>
-                        <n-icon :color="d.color" size="30px">
-                            <Icon :icon="d.icon" />
-                        </n-icon>
-                    </template>
-                </n-button>
+                        <template #icon>
+                            <n-icon :color="d.color" size="30px">
+                                <Icon :icon="d.icon" />
+                            </n-icon>
+                        </template>
+                    </n-button>
+
+                    <!--              version -->
+                    <n-gradient-text type="success">
+                        Latest Version:
+                        <n-gradient-text type="info">{{ d.version }}</n-gradient-text>
+                    </n-gradient-text>
+                </n-flex>
             </n-card>
         </n-space>
     </n-flex>
@@ -40,6 +48,7 @@ const dw = [
         color: 'blue',
         dl: 'Download for Windows',
         url: 'https://github.com/naive-ui/naive-ui/releases',
+        version: '1.0.0',
     },
     {
         title: 'macOS',
@@ -47,6 +56,7 @@ const dw = [
         color: 'white',
         dl: 'Download for macOS',
         url: 'https://github.com/naive-ui/naive-ui/releases',
+        version: '1.0.0',
     },
     {
         title: 'Linux',
@@ -54,6 +64,7 @@ const dw = [
         color: 'orange',
         dl: 'Download for Linux',
         url: 'https://github.com/naive-ui/naive-ui/releases',
+        version: '1.0.0',
     },
 ]
 
