@@ -6,6 +6,7 @@
 - ✅ 支持多语言:  [i18n](https://vitepress.dev/zh/guide/i18n)
 - ✅ 支持 [markdown](https://vitepress.dev/zh/guide/markdown)
 - ✅ 支持 一键发布到 Github Pages
+- ✅ 集成了 [naive-ui](https://www.naiveui.com/), 并修复了`主题(明/暗)`切换
 
 ## FAQ
 
@@ -22,7 +23,6 @@
 - ✅ [vitepress](https://vitepress.dev/)
 - ✅ [bun](https://bun.run/)
 - ✅ [taskfile](https://taskfile.dev/)
-
 
 ### Run
 
