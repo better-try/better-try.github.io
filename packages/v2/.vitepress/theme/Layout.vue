@@ -34,12 +34,13 @@ watchEffect(() => {
           - naive ui 组件配置:
             - https://www.naiveui.com/zh-CN/dark/components/message
           - dark mode:
+            - https://www.naiveui.com/zh-CN/dark/docs/customize-theme
+            - https://vitepress.dev/zh/guide/custom-theme
             - https://vueuse.org/core/useDark/#basic-usage
 
   -->
   <n-config-provider :theme="isDark ? darkTheme : lightTheme">
     <n-message-provider>
-
       <!--    默认-->
       <DefaultTheme.Layout/>
     </n-message-provider>
