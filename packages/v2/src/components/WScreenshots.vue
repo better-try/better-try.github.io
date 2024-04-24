@@ -1,6 +1,6 @@
 <template>
     <n-flex justify="center" vertical>
-        <n-carousel align="center" autoplay dot-placement="bottom" interval="1500" show-arrow style="width: 80%">
+        <n-carousel :interval="1500" align="center" autoplay dot-placement="bottom" show-arrow style="width: 80%">
             <div v-for="img in images" :key="img" class="items-center">
                 <n-image :src="img" style="width: 100%" width="100%"></n-image>
                 <!--                <img :src="img" class="carousel-img" style="width: 100%" />-->

@@ -24,14 +24,7 @@
                     <w-screenshots :images="imgs"></w-screenshots>
                 </n-tab-pane>
                 <n-tab-pane name="download" tab="Download">
-                    <div>
-                        <n-space>
-                            <n-button strong type="success" @click="download()">Download</n-button>
-                            <n-button strong type="info" @click="info()">Buy</n-button>
-                        </n-space>
-                    </div>
-
-                    Download this app
+                    <w-download></w-download>
                 </n-tab-pane>
                 <n-tab-pane name="buy" tab="Buy Now">
                     <div class="grid-2">
@@ -53,6 +46,7 @@
 import { ref } from 'vue'
 import { useMessage } from 'naive-ui'
 import WScreenshots from './WScreenshots.vue'
+import WDownload from './WDownload.vue'
 
 const count = ref(0)
 

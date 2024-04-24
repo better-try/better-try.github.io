@@ -13,13 +13,8 @@ layout: home
 
 <w-product/>
 
-## Download
-
-## Buy
 
 <script setup>
-
-
 // prettier-ignore
 import WProduct from "../components/WProduct.vue";
 import WDownload from "../components/WDownload.vue";

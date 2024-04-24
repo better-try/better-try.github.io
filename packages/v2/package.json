@@ -8,6 +8,7 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.2",
     "@lunariajs/core": "^0.0.32",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.2",
