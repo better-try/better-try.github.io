@@ -11,14 +11,16 @@ layout: home
 - support multiple blockchains
 - support multiple languages
 
-## Download
+<w-product/>
 
-<WDownload/>
+## Download
 
 ## Buy
 
-<WDownload/>
-
 <script setup>
-import WDownload from '../components/WDownload.vue'
+
+
+// prettier-ignore
+import WProduct from "../components/WProduct.vue";
+import WDownload from "../components/WDownload.vue";
 </script>

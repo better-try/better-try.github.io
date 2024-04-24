@@ -1,109 +1,67 @@
 <template>
+    <n-flex>
+        <n-flex vertical>
+            <n-split :min="0.25" class="m-5 p-5" default-size="0.3" direction="horizontal">
+                <template #1>
+                    <n-flex class="px-5">
+                        <n-card>
+                            <div>
+                                <n-avatar class="bg-red-400 text-4xl" size="large"> M</n-avatar>
+                            </div>
+                            <n-gradient-text class="text-2xl" type="info"> Desc</n-gradient-text>
+                            <br />
 
-
-  <n-flex>
-
-    <n-flex vertical>
-
-
-      <n-split direction="horizontal"
-               default-size="0.3"
-               class="m-5 p-5"
-               :max="0.75" :min="0.25">
-        <template #1>
-
-
-          <n-flex vertical>
-            <div>
-              <n-avatar
-                class="bg-red-400 text-4xl"
-                size="large"
-              >
-                M
-              </n-avatar>
-            </div>
-
-
-            <div>
-              <li>Awesome Wallet Application</li>
-              <li>support Windows/macOS/Linux</li>
-              <li>support multiple blockchains</li>
-              <li>support multiple languages</li>
-            </div>
-          </n-flex>
-
-
-        </template>
-        <template #2>
-
-          <div class="px-5">
-            <n-card content-class="">
-              <n-row class="">
-                <n-carousel
-                  dot-placement="bottom"
-                  interval="2000"
-                  align="center"
-                  class=""
-                  autoplay>
-                  <img
-                    class="carousel-img"
-                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-                  >
-                  <img
-                    class="carousel-img"
-                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-                  >
-                  <img
-                    class="carousel-img"
-                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-                  >
-                </n-carousel>
-              </n-row>
-
-            </n-card>
-          </div>
-
-
-        </template>
-      </n-split>
-
+                            <n-gradient-text type="warning">
+                                <n-ellipsis expand-trigger="click" line-clamp="13">
+                                    电灯熄灭 物换星移 泥牛入海<br />
+                                    黑暗好像 一颗巨石 按在胸口<br />
+                                    独脚大盗 百万富翁 摸爬滚打<br />
+                                    电灯熄灭 物换星移 泥牛入海<br />
+                                    独脚大盗 百万富翁 摸爬滚打<br />
+                                    电灯熄灭 物换星移 泥牛入海<br />
+                                    独脚大盗 百万富翁 摸爬滚打<br />
+                                    电灯熄灭 物换星移 泥牛入海<br />
+                                    黑暗好像 一颗巨石 按在胸口<br />
+                                    独脚大盗 百万富翁 摸爬滚打<br />
+                                    电灯熄灭 物换星移 泥牛入海<br />
+                                    黑暗好像 一颗巨石 按在胸口<br />
+                                    独脚大盗 百万富翁 摸爬滚打<br />
+                                    电灯熄灭 物换星移 泥牛入海<br />
+                                    黑暗好像 一颗巨石 按在胸口<br />
+                                    独脚大盗 百万富翁 摸爬滚打<br />
+                                    黑暗好像 一颗巨石 按在胸口
+                                </n-ellipsis>
+                            </n-gradient-text>
+                        </n-card>
+                    </n-flex>
+                </template>
+                <template #2>
+                    <div class="px-5">
+                        <n-card content-class="">
+                            <n-row class="">
+                                <n-carousel align="center" autoplay class="" dot-placement="bottom" interval="2000">
+                                    <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg" />
+                                    <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg" />
+                                    <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg" />
+                                </n-carousel>
+                            </n-row>
+                        </n-card>
+                    </div>
+                </template>
+            </n-split>
+        </n-flex>
     </n-flex>
-
-
-    <n-card theme="dark">
-      <n-space>
-        <n-button strong type="success" @click="download()">Download</n-button>
-        <n-button strong type="info" @click="info()">Buy</n-button>
-      </n-space>
-
-
-      <div class="grid-2">
-        <n-text> The count is: {{ count }}</n-text>
-
-        <n-space>
-          <n-badge :value="count"> count</n-badge>
-
-          <n-button strong type="warning" @click="count++">Increment</n-button>
-        </n-space>
-      </div>
-
-    </n-card>
-
-  </n-flex>
-
-
 </template>
 
-<script setup lang="ts">
-import {ref} from 'vue'
-import {useMessage} from "naive-ui";
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { useMessage } from 'naive-ui'
 
 const count = ref(0)
 
 function download() {
-  alert("download")
+    alert('download')
 }
-
 
 //
 // todo x: check `.vitepress/theme/Layout.vue`
@@ -111,28 +69,23 @@ function download() {
 const message = useMessage()
 
 function info() {
-  message.info(
-    "I don't know why nobody told you how to unfold your love",
-    {
-      keepAliveOnHover: true
-    }
-  )
+    message.info("I don't know why nobody told you how to unfold your love", {
+        keepAliveOnHover: true,
+    })
 }
-
 </script>
 
 <style module>
 .button {
-  margin: 5px;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background-color: orange;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: orange;
 }
 
 .button:hover {
-  background-color: blue;
+    background-color: blue;
 }
-
 </style>
