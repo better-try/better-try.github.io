@@ -31,6 +31,19 @@ tasks:
       - bun add -D @lunariajs/core
       - bun add -D markdown-it-mathjax3
       - bun add -D naive-ui
+#      - bun add -D unocss
+#      - bun add -D @unocss/postcss
+      - bun add -D daisyui@latest
+      - bun add -D tailwindcss
+      - bun add -D postcss
+      - bun add -D prettier
+      - bun add -D autoprefixer
+
+  remove:
+    aliases: [ "rm" ]
+    cmds:
+      - bun remove unocss
+      - bun remove @unocss/postcss
 
   run:
     aliases: [ "r" ]
@@ -55,12 +68,12 @@ tasks:
       - git init
       - git add -A
       - git commit -m 'deploy'
-#      - |
-#        cd ..;
-#        repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git " '{print "git@github.com:"$1".git"}'`;
-#        echo "git remote add $repo_url";
-#        cd .dist/;
-#        git remote add origin $repo_url
+      #      - |
+      #        cd ..;
+      #        repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git " '{print "git@github.com:"$1".git"}'`;
+      #        echo "git remote add $repo_url";
+      #        cd .dist/;
+      #        git remote add origin $repo_url
       - git remote add origin {{.GIT_REPO}}
       - git branch -M {{.BRANCH}}
       - git push -f origin {{.BRANCH}}
@@ -78,7 +91,7 @@ tasks:
       - task: open
 
   clean:
-    aliases: [ "cl", "rm" ]
+    aliases: [ "cl" ]
     cmds:
       - rm -rf cache/
       - rm -rf dist/
