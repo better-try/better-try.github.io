@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <n-tabs default-value="screenshots" justify-content="space-evenly" pane-class="text-2xl " size="large" tab-class="text-2xl text-primary" trigger="hover" type="card">
+            <n-tabs default-value="screenshots" justify-content="space-evenly" pane-class="text-2xl " size="large" tab-class="text-2xl text-primary" trigger="click" type="card">
                 <n-tab-pane name="desc" tab="Desc">
                     <div>
                         <n-gradient-text type="warning">
@@ -20,11 +20,8 @@
                 </n-tab-pane>
 
                 <n-tab-pane name="screenshots" tab="Screenshots">
-                    <n-carousel align="center" autoplay class="" dot-placement="bottom" interval="2000">
-                        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg" />
-                        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg" />
-                        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg" />
-                    </n-carousel>
+                    <!--                  截图-->
+                    <w-screenshots :images="imgs"></w-screenshots>
                 </n-tab-pane>
                 <n-tab-pane name="download" tab="Download">
                     <div>
@@ -36,7 +33,7 @@
 
                     Download this app
                 </n-tab-pane>
-                <n-tab-pane name="buy" tab="Buy">
+                <n-tab-pane name="buy" tab="Buy Now">
                     <div class="grid-2">
                         <n-text> The count is: {{ count }}</n-text>
                         <n-space>
@@ -55,8 +52,15 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useMessage } from 'naive-ui'
+import WScreenshots from './WScreenshots.vue'
 
 const count = ref(0)
+
+const imgs = [
+    'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg',
+    'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg',
+    'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg',
+]
 
 function download() {
     alert('download')
