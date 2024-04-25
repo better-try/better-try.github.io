@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <n-tabs default-value="screenshots" justify-content="space-evenly" pane-class="text-2xl " size="large" tab-class="text-2xl text-primary" trigger="click" type="card">
+            <n-tabs default-value="screenshots" justify-content="space-evenly" pane-class="text-2xl " size="medium" tab-class="text-2xl text-primary" trigger="click" type="card">
                 <n-tab-pane name="desc" tab="Desc">
                     <div>
                         <n-gradient-text type="warning">
@@ -26,16 +26,11 @@
                 <n-tab-pane name="download" tab="Download">
                     <w-download></w-download>
                 </n-tab-pane>
-                <n-tab-pane name="buy" tab="Buy Now">
-                    <div class="grid-2">
-                        <n-text> The count is: {{ count }}</n-text>
-                        <n-space>
-                            <n-badge :value="count"> count</n-badge>
-                            <n-button strong type="warning" @click="count++">Increment</n-button>
-                        </n-space>
-                    </div>
-
-                    Buy this app
+                <n-tab-pane name="buy" tab="Pricing">
+                    <w-pricing></w-pricing>
+                </n-tab-pane>
+                <n-tab-pane name="help" tab="Help">
+                    <w-help></w-help>
                 </n-tab-pane>
             </n-tabs>
         </div>
@@ -45,8 +40,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useMessage } from 'naive-ui'
-import WScreenshots from './WScreenshots.vue'
-import WDownload from './WDownload.vue'
+import WScreenshots from '../components/WScreenshots.vue'
+import WDownload from '../components/WDownload.vue'
+import WPricing from '../components/WPricing.vue'
+import WHelp from '../components/WHelp.vue'
 
 const count = ref(0)
 

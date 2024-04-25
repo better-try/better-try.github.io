@@ -11,11 +11,10 @@ layout: home
 - support multiple blockchains
 - support multiple languages
 
-<w-product/>
+<product-page/>
 
 
 <script setup>
 // prettier-ignore
-import WProduct from "../components/WProduct.vue";
-import WDownload from "../components/WDownload.vue";
+import ProductPage from "../pages/ProductPage.vue";
 </script>
