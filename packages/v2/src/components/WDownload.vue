@@ -1,7 +1,8 @@
 <template>
-    <n-flex>
-        <n-space>
-            <n-card v-for="d in dw" :key="d" :title="d.title">
+    <!--  todo x: style="justify-content: center"-->
+    <div style="">
+        <n-space justify="space-between">
+            <n-card v-for="d in dw" :key="d" :title="d.title" style="min-width: 300px; align-items: center">
                 <n-flex vertical>
                     <n-button secondary size="large" strong type="success" @click="download(d.url)"
                         >{{ d.dl }}
@@ -21,7 +22,7 @@
                 </n-flex>
             </n-card>
         </n-space>
-    </n-flex>
+    </div>
 </template>
 
 <script lang="ts" setup>

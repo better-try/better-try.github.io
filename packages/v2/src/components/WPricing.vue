@@ -1,7 +1,7 @@
 <template>
-    <n-flex>
-        <n-space>
-            <n-card v-for="d in dw" :key="d" :title="d.title">
+    <div>
+        <n-space justify="space-between">
+            <n-card v-for="d in dw" :key="d" :title="d.title" style="min-width: 300px; min-height: 500px">
                 <n-flex vertical>
                     <n-button secondary size="large" strong type="success" @click="download(d.url)"
                         >{{ d.dl }}
@@ -21,7 +21,7 @@
                 </n-flex>
             </n-card>
         </n-space>
-    </n-flex>
+    </div>
 </template>
 
 <script lang="ts" setup>
@@ -43,7 +43,8 @@ const props = defineProps({
 //
 const dw = [
     {
-        title: '免费版',
+        title: '免费版', // basic
+        price: 'Free',
         icon: 'iconoir:windows', // <Icon icon="iconoir:windows" />
         color: 'blue',
         dl: 'Download for Windows',
@@ -52,17 +53,10 @@ const dw = [
     },
     {
         title: '高级版',
+        price: '$5.99',
         icon: 'iconoir:apple-mac', // <Icon icon="iconoir:apple-mac" />
         color: 'white',
         dl: 'Download for macOS',
-        url: 'https://github.com/naive-ui/naive-ui/releases',
-        version: '1.0.0',
-    },
-    {
-        title: 'Linux',
-        icon: 'uil:linux', // <Icon icon="uil:linux" />
-        color: 'orange',
-        dl: 'Download for Linux',
         url: 'https://github.com/naive-ui/naive-ui/releases',
         version: '1.0.0',
     },

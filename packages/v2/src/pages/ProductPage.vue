@@ -1,8 +1,8 @@
 <template>
     <div>
         <div>
-            <n-tabs default-value="screenshots" justify-content="space-evenly" pane-class="text-2xl " size="medium" tab-class="text-2xl text-primary" trigger="click" type="card">
-                <n-tab-pane name="desc" tab="Desc">
+            <n-tabs default-value="screenshots" justify-content="space-evenly" size="medium" tab-style="font-weight: bold; font-size: 20px;" trigger="click" type="segment">
+                <n-tab-pane name="desc" tab="Description">
                     <div>
                         <n-gradient-text type="warning">
                             <n-ellipsis expand-trigger="click" line-clamp="13">
@@ -19,7 +19,7 @@
                     </div>
                 </n-tab-pane>
 
-                <n-tab-pane name="screenshots" tab="Screenshots">
+                <n-tab-pane name="screenshots" tab="Preview">
                     <!--                  截图-->
                     <w-screenshots :images="imgs"></w-screenshots>
                 </n-tab-pane>
@@ -27,7 +27,9 @@
                     <w-download></w-download>
                 </n-tab-pane>
                 <n-tab-pane name="buy" tab="Pricing">
-                    <w-pricing></w-pricing>
+                    <div class="" style="width: 100%">
+                        <w-pricing></w-pricing>
+                    </div>
                 </n-tab-pane>
                 <n-tab-pane name="help" tab="Help">
                     <w-help></w-help>
@@ -68,3 +70,11 @@ function info() {
     })
 }
 </script>
+
+<style scoped>
+.myTab {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+}
+</style>
