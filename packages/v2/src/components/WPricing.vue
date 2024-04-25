@@ -1,23 +1,24 @@
 <template>
     <div>
         <n-space justify="space-between">
-            <n-card v-for="d in dw" :key="d" :title="d.title" style="min-width: 300px; min-height: 500px">
-                <n-flex vertical>
-                    <n-button secondary size="large" strong type="success" @click="download(d.url)"
+            <n-card v-for="d in dw" :key="d" style="min-width: 300px; min-height: 500px">
+                <n-flex class="py-5" vertical>
+                    <n-text align="center" class="text-2xl" type="warning">{{ d.title }}</n-text>
+                    <n-text align="center" class="text-4xl text-amber-500 py-5" type="info">{{ d.price }}</n-text>
+
+                    <n-button class="" secondary size="large" strong type="success" @click="download(d.url)"
                         >{{ d.dl }}
 
-                        <template #icon>
-                            <n-icon :color="d.color" size="30px">
-                                <Icon :icon="d.icon" />
-                            </n-icon>
-                        </template>
+                        <template #icon></template>
                     </n-button>
 
-                    <!--              version -->
-                    <n-gradient-text type="success">
-                        Latest Version:
-                        <n-gradient-text type="info">{{ d.version }}</n-gradient-text>
-                    </n-gradient-text>
+                    <n-flex class="py-5" vertical>
+                        <!--              version -->
+                        <n-gradient-text type="success">
+                            Latest Version:
+                            <n-gradient-text type="info">{{ d.version }}</n-gradient-text>
+                        </n-gradient-text>
+                    </n-flex>
                 </n-flex>
             </n-card>
         </n-space>
@@ -26,7 +27,6 @@
 
 <script lang="ts" setup>
 import { useMessage } from 'naive-ui' //
-import { Icon } from '@iconify/vue'
 //
 // todo x: check `.vitepress/theme/Layout.vue`
 //
@@ -43,20 +43,29 @@ const props = defineProps({
 //
 const dw = [
     {
-        title: '免费版', // basic
+        title: 'Basic', // basic // 免费版
         price: 'Free',
         icon: 'iconoir:windows', // <Icon icon="iconoir:windows" />
         color: 'blue',
-        dl: 'Download for Windows',
+        dl: 'Free Download',
         url: 'https://github.com/naive-ui/naive-ui/releases',
         version: '1.0.0',
     },
     {
-        title: '高级版',
+        title: 'Pro', // pro // 专业版
         price: '$5.99',
         icon: 'iconoir:apple-mac', // <Icon icon="iconoir:apple-mac" />
         color: 'white',
-        dl: 'Download for macOS',
+        dl: 'Select Plan',
+        url: 'https://github.com/naive-ui/naive-ui/releases',
+        version: '1.0.0',
+    },
+    {
+        title: 'Ultimate', // ultimate // 旗舰版
+        price: '$5.99',
+        icon: 'iconoir:apple-mac', // <Icon icon="iconoir:apple-mac" />
+        color: 'white',
+        dl: 'Select Plan',
         url: 'https://github.com/naive-ui/naive-ui/releases',
         version: '1.0.0',
     },
