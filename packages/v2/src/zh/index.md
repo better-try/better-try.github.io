@@ -6,6 +6,14 @@ hero:
   name: "尝试更好的应用&产品"
   #  text: "trybetter.app 只出精品"
   tagline: "专注开发精品, 为用户提供更好的体验"
+  # 按钮相关
+  actions:
+    - theme: brand
+      text: 产品
+      link: /zh/products/index
+    - theme: alt
+      text: 用户指南
+      link: /zh/guide/index
 
 
 features:

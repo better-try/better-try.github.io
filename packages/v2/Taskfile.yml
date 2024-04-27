@@ -65,8 +65,11 @@ tasks:
     aliases: [ "dp", "up", "upload" ]
     cmds:
       - echo "deploy to {{ .GIT_REPO }} gh-pages"
+      # TODO X: 删除 .git 文件
       - rm -rf .git/
       - git init
+      # TODO X: 如果是发布到自定义域名
+      - echo '{{ .DOMAIN }}' > CNAME
       - git add -A
       - git commit -m 'deploy'
       #      - |
@@ -82,6 +85,7 @@ tasks:
     vars:
       GIT_REPO: git@github.com:better-try/better-try.github.io.git
       BRANCH: gh-pages
+      DOMAIN: "trybetter.app"
     ignore_error: true
 
   quick:
