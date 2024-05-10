@@ -41,7 +41,7 @@ export default {
   // },
   enhanceApp({ app, router, siteData }) {
     // ...
-    app.use(naive)
+    app.use(naive) // todo x: 不使用, 620 KB, 使用, 1.9MB
     app.use(
       Quasar,
       {

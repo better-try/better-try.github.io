@@ -68,6 +68,7 @@ tasks:
     aliases: [ "b" ]
     cmds:
       - bun run build
+      - open ./.vitepress/dist/
 
   preview:
     aliases: [ "p" ]

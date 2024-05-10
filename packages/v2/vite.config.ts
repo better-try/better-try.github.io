@@ -57,6 +57,21 @@ export default defineConfig({
 
   // fix:
   build: {
-    chunkSizeWarningLimit: 1600, // ref: https://github.com/vitejs/vite/discussions/9440
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vue-vender': ['vue', 'vuex', 'vue-router'],
+          'naive-vender': ['naive-ui'],
+
+          vue: ['vue', 'vue-router', 'pinia'],
+          quasar: ['quasar'],
+          naive: ['naive-ui'],
+          lodash: ['lodash'],
+          'naive-ui': ['naive-ui'],
+        },
+      },
+    },
+
+    chunkSizeWarningLimit: 500, // ref: https://github.com/vitejs/vite/discussions/9440
   },
 })
