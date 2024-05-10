@@ -15,10 +15,17 @@
 
 ## FAQ
 
-### Github Pages 绑定域名问题:
+### Fix: Github Pages 绑定域名问题:
 
 - 绑定自定义域名, 无需设置 base_url(也就是 repo name)
 - 但是每次发布 github pages, 都需要手动在项目设置页里, 设置 `自定义域名`
+- 修复方法: 手动生成 `CNAME` 文件, 填入待解析域名, 并一起上传.
+
+```ruby
+# 部署脚本中含有一行指令: 手动生成 CNAME 文件(内含有待绑定的域名)
+task deploy
+
+```
 
 ## Development
 
