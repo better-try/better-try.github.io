@@ -4,17 +4,32 @@ layout: home
 
 # Geek Wallet
 
-## Description
-
-- Awesome Wallet Application
-- support Windows/macOS/Linux
-- support multiple blockchains
-- support multiple languages
+## Overview
 
 <product-page/>
+
+## DownLoad
+
+<w-download></w-download>
+
+## Pricing
+
+<w-pricing></w-pricing>
+
+## License
+
+<w-license></w-license>
+
+## Help
+
+<w-help></w-help>
 
 
 <script setup>
 // prettier-ignore
 import ProductPage from "../pages/ProductPage.vue";
+import WDownload from "../components/WDownload.vue";
+import WPricing from "../components/WPricing.vue";
+import WLicense from "../components/WLicense.vue";
+import WHelp from "../components/WHelp.vue";
 </script>
