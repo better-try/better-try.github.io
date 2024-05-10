@@ -65,6 +65,12 @@ task run
 
 ```ruby
 
+# build + deploy:
+task q 
+
+# or: (root dir)
+# task v2:q
+
 # 自动编译 + 部署到 GitHub Pages
 task deploy
 

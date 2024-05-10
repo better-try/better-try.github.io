@@ -54,4 +54,9 @@ export default defineConfig({
 
     // UnoCSS(),
   ],
+
+  // fix:
+  build: {
+    chunkSizeWarningLimit: 1600, // ref: https://github.com/vitejs/vite/discussions/9440
+  },
 })
