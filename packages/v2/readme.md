@@ -6,7 +6,10 @@
 - ✅ 支持多语言:  [i18n](https://vitepress.dev/zh/guide/i18n)
 - ✅ 支持 [markdown](https://vitepress.dev/zh/guide/markdown)
 - ✅ 支持 一键发布到 Github Pages
-- ✅ 集成了 [naive-ui](https://www.naiveui.com/), 并修复了`主题(明/暗)`切换
+- ✅ 集成 [naive-ui](https://www.naiveui.com/), 并修复了`主题(明/暗)`切换
+- ✅ 集成 [quasar](https://quasar.dev/), 参考文档: [vite-plugin](https://quasar.dev/start/vite-plugin/)
+- ✅ 集成 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+- ✅ 集成 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
 
 ## FAQ
 

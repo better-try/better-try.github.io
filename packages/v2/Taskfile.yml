@@ -40,6 +40,14 @@ tasks:
       - bun add -D autoprefixer
       - bun add -D @iconify/vue # icon
 
+  fix:quasar:
+    aliases: [ "fq" ]
+    cmds:
+      - bun add quasar @quasar/extras
+      - bun add --dev @quasar/vite-plugin sass@^1.33.0
+      - bun add --dev unplugin-vue-components
+      - bun add --dev unplugin-auto-import
+
   remove:
     aliases: [ "rm" ]
     cmds:
