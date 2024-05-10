@@ -7,15 +7,13 @@
         style="min-width: 300px; min-height: 500px"
       >
         <n-flex class="py-5" vertical>
-          <n-text align="center" class="text-2xl" type="warning">{{
-            d.title
-          }}</n-text>
+          <n-text class="text-2xl" type="warning">{{ d.title }} </n-text>
           <n-text
             align="center"
             class="text-4xl text-amber-500 py-5"
             type="info"
-            >{{ d.price }}</n-text
-          >
+            >{{ d.price }}
+          </n-text>
 
           <n-button
             class=""
@@ -65,7 +63,7 @@ const dw = [
     icon: 'iconoir:windows', // <Icon icon="iconoir:windows" />
     color: 'blue',
     dl: 'Free Download',
-    url: 'https://github.com/naive-ui/naive-ui/releases',
+    url: '#download',
     version: '1.0.0',
   },
   {
@@ -89,10 +87,16 @@ const dw = [
 ]
 
 function download(url: string) {
+  if (url === '#download') {
+    // open url
+    window.open(url, '_blank')
+    return
+  }
+
   const msg = 'downloading... ' + url
 
   message.success(msg, {
-    duration: 3000,
+    duration: 1500,
   })
 }
 
