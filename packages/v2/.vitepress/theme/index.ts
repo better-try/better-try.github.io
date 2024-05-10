@@ -18,6 +18,7 @@ import {
   QInput,
   QLayout,
   QPage,
+  QPageContainer,
   QTab,
   QTabPanel,
   QTabs,
@@ -67,6 +68,7 @@ export default {
           QTree,
           QPage,
           QLayout,
+          QPageContainer,
         ],
       },
       {
