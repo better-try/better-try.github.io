@@ -8,6 +8,8 @@
 - ✅ 支持 一键发布到 Github Pages
 - ✅ 集成 [naive-ui](https://www.naiveui.com/), 并修复了`主题(明/暗)`切换
 - ✅ 集成 [quasar](https://quasar.dev/), 参考文档: [vite-plugin](https://quasar.dev/start/vite-plugin/)
+  - 修复了`主题(明/暗)`切换
+  - 修复无法`自动导入组件(找不到组件)`, 参见: [.vitepress/theme/index.ts](./.vitepress/theme/index.ts)
 - ✅ 集成 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
 - ✅ 集成 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
 
