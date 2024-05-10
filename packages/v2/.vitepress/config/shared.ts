@@ -1,11 +1,8 @@
-import {defineConfig} from 'vitepress'
-import {search as zhSearch} from './zh'
-import {search as ptSearch} from './pt'
-import {search as ruSearch} from './ru'
+import { defineConfig } from 'vitepress'
 
 export const shared = defineConfig({
-  title: "TryBetterApp",
-  description: "try better app",
+  title: 'TryBetterApp',
+  description: 'try better app',
 
   //
   // todo x: github pages 部署方式, 设置为 repo name
@@ -19,7 +16,8 @@ export const shared = defineConfig({
   //
   srcDir: 'src',
 
-
+  // default theme, ref: https://vitepress.dev/reference/site-config#appearance
+  appearance: 'dark',
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
@@ -31,16 +29,16 @@ export const shared = defineConfig({
       {
         postprocess(code) {
           return code.replace(/\[\!\!code/g, '[!code')
-        }
-      }
-    ]
+        },
+      },
+    ],
   },
 
   sitemap: {
     hostname: 'https://trybetter.app',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
-    }
+    },
   },
 
   /* prettier-ignore */
@@ -58,21 +56,18 @@ export const shared = defineConfig({
   ],
 
   themeConfig: {
-
     //
     // todo x: logo
     //  - 如果自定义了 src 路径, 需要把 public, 放在 src/public 下, 才是正确匹配的
     //
-    logo: {src: '/logo.svg', width: 24, height: 24},
-
+    logo: { src: '/logo.svg', width: 24, height: 24 },
 
     socialLinks: [
-      {icon: 'github', link: 'https://github.com/better-try'},
-      {icon: 'twitter', link: 'https://twitter.com/trybetterapp'},
-      {icon: 'discord', link: 'https://github.com/better-try'},
-      {icon: 'youtube', link: 'https://youtube.com/@trybetterapp'},
+      { icon: 'github', link: 'https://github.com/better-try' },
+      { icon: 'twitter', link: 'https://twitter.com/trybetterapp' },
+      { icon: 'discord', link: 'https://github.com/better-try' },
+      { icon: 'youtube', link: 'https://youtube.com/@trybetterapp' },
     ],
-
 
     //
     // todo x: 搜索模块
@@ -87,10 +82,9 @@ export const shared = defineConfig({
     //   }
     // },
 
-
     //
     // todo x: carbon ads
     //
     // carbonAds: { code: 'CEBDT27Y', placement: 'vuejsorg' }
-  }
+  },
 })
