@@ -33,34 +33,14 @@
       </n-card>
     </n-space>
   </div>
-
-  <div>
-    <q-card>
-      <q-btn color="primary" outline>Hello Quasar</q-btn>
-
-      <br />
-
-      <q-btn color="red" type="success">test</q-btn>
-
-      <div class="q-pa-md q-gutter-sm">
-        <q-btn color="white" label="Standard" text-color="black" />
-        <q-btn color="primary" label="Primary" />
-        <q-btn color="secondary" label="Secondary" />
-        <q-btn color="amber" glossy label="Amber" />
-        <q-btn color="brown-5" label="Brown 5" />
-        <q-btn color="deep-orange" glossy label="Deep Orange" />
-        <q-btn color="purple" label="Purple" />
-        <q-btn color="black" label="Black" />
-      </div>
-
-      <q-tree></q-tree>
-    </q-card>
-  </div>
 </template>
 
 <script lang="ts" setup>
 import { useMessage } from 'naive-ui' //
 import { Icon } from '@iconify/vue'
+
+// todo x: 需要手动引入 or 全局注册(.vitepress/theme/index.ts)
+
 //
 // todo x: check `.vitepress/theme/Layout.vue`
 //

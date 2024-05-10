@@ -4,7 +4,26 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import Layout from './Layout.vue'
 import naive from 'naive-ui' // import "unocss"
-import { Quasar } from 'quasar' // Import icon libraries
+import {
+  QAvatar,
+  QBadge,
+  QBar,
+  QBtn,
+  QCard,
+  QFooter,
+  QForm,
+  QHeader,
+  QIcon,
+  QImg,
+  QInput,
+  QLayout,
+  QPage,
+  QTab,
+  QTabPanel,
+  QTabs,
+  QTree,
+  Quasar,
+} from 'quasar' // Import icon libraries
 import '@quasar/extras/material-icons/material-icons.css' // Import Quasar css
 import 'quasar/src/css/index.sass'
 
@@ -26,6 +45,29 @@ export default {
       Quasar,
       {
         plugins: {}, // import Quasar plugins and add here
+
+        //
+        // TODO X: 需要手动枚举一遍!!!
+        //
+        components: [
+          QBtn,
+          QCard,
+          QForm,
+          QHeader,
+          QFooter,
+          QTab,
+          QTabs,
+          QTabPanel,
+          QAvatar,
+          QBar,
+          QBadge,
+          QIcon,
+          QInput,
+          QImg,
+          QTree,
+          QPage,
+          QLayout,
+        ],
       },
       {
         req: {

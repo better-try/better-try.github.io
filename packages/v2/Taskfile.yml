@@ -48,6 +48,11 @@ tasks:
       - bun add --dev unplugin-vue-components
       - bun add --dev unplugin-auto-import
 
+  check:
+    cmds:
+      - quasar  -h
+      - quasar info
+
   remove:
     aliases: [ "rm" ]
     cmds:
