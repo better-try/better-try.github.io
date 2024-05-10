@@ -17,9 +17,9 @@ export default defineConfig({
   //
   // todo x:
   //
-  vite: {
-    ssr: {
-      noExternal: ['naive-ui', 'date-fns', 'vueuc'],
-    },
-  },
+  // vite: {
+  //   ssr: {
+  //     noExternal: ['naive-ui', 'date-fns', 'vueuc'],
+  //   },
+  // },
 })

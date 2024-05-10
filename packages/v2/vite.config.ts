@@ -60,14 +60,13 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'vue-vender': ['vue', 'vuex', 'vue-router'],
-          'naive-vender': ['naive-ui'],
-
-          vue: ['vue', 'vue-router', 'pinia'],
+          // 'vue-vender': ['vue', 'vuex', 'vue-router'],
+          // 'naive-vender': ['naive-ui'],
+          // vue: ['vue', 'vue-router', 'pinia'],
           quasar: ['quasar'],
-          naive: ['naive-ui'],
+          // naive: ['naive-ui'],
           lodash: ['lodash'],
-          'naive-ui': ['naive-ui'],
+          // 'naive-ui': ['naive-ui'],
         },
       },
     },
