@@ -18,6 +18,7 @@ export default defineConfig({
     //
     Components({
       /* options */
+      dts: true, // enabled by default if `typescript` is installed
       resolvers: [QuasarResolver(), NaiveUiResolver()],
     }),
 
@@ -29,6 +30,18 @@ export default defineConfig({
         /\.vue$/,
         /\.vue\?vue/, // .vue
         /\.md$/, // .md
+      ],
+
+      imports: [
+        'vue',
+        {
+          'naive-ui': [
+            'useDialog',
+            'useMessage',
+            'useNotification',
+            'useLoadingBar',
+          ],
+        },
       ],
     }),
 
