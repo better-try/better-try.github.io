@@ -98,13 +98,14 @@ import WHelp from '../components/WHelp.vue'
 import WLicense from '../components/WLicense.vue'
 
 const count = ref(0)
-
 const tab = ref('preview')
 
 const imgs = [
   'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg',
-  'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg',
-  'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg',
+  'https://cdn.quasar.dev/img/parallax1.jpg',
+  'https://cdn.quasar.dev/img/parallax2.jpg',
+  'https://cdn.quasar.dev/img/material.png',
+  'https://cdn.quasar.dev/img/donuts.png',
 ]
 
 function download() {
