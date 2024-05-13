@@ -47,7 +47,9 @@ tasks:
       - bun add --dev @quasar/vite-plugin sass@^1.33.0
       - bun add --dev unplugin-vue-components
       - bun add --dev unplugin-auto-import
-      - bun add vue-i18n
+      - bun add --dev vue
+      - bun add --dev vue-i18n
+      - bun add --dev vue-router
 
   check:
     cmds:

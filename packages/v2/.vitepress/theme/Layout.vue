@@ -1,11 +1,15 @@
 <!-- docs/.vitepress/theme/Layout.vue -->
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'
-import { inBrowser, useData } from 'vitepress'
+import { inBrowser, useData, useRoute, useRouter } from 'vitepress'
 import { watchEffect } from 'vue'
 import { darkTheme, lightTheme } from 'naive-ui'
 import { useQuasar } from 'quasar'
 import { useI18n } from 'vue-i18n'
+
+const { Layout } = DefaultTheme
+const route = useRoute()
+const router = useRouter()
 
 // const isDark = ref(false)
 // isDark.value = useColorMode().value === 'dark';
@@ -42,21 +46,30 @@ watchEffect(() => {
 </script>
 
 <template>
-  <!--  todo x:
-          - 此文件相当于 app.vue
-          - naive ui 的一些涉及 全局样式的设置, 都在此修改
-          - naive ui 组件配置:
-            - https://www.naiveui.com/zh-CN/dark/components/message
-          - dark mode:
-            - https://www.naiveui.com/zh-CN/dark/docs/customize-theme
-            - https://vitepress.dev/zh/guide/custom-theme
-            - https://vueuse.org/core/useDark/#basic-usage
+  <router-view>
+    <!--  todo x:
+            - 此文件相当于 app.vue
+            - naive ui 的一些涉及 全局样式的设置, 都在此修改
+            - naive ui 组件配置:
+              - https://www.naiveui.com/zh-CN/dark/components/message
+            - dark mode:
+              - https://www.naiveui.com/zh-CN/dark/docs/customize-theme
+              - https://vitepress.dev/zh/guide/custom-theme
+              - https://vueuse.org/core/useDark/#basic-usage
 
-  -->
-  <n-config-provider :theme="isDark ? darkTheme : lightTheme">
-    <n-message-provider>
-      <!--    默认-->
-      <DefaultTheme.Layout />
-    </n-message-provider>
-  </n-config-provider>
+    -->
+    <n-config-provider :theme="isDark ? darkTheme : lightTheme">
+      <n-message-provider>
+        <!--    默认-->
+        <!--      <DefaultTheme.Layout />-->
+        <Layout>
+          <!--          todo x: -->
+          <template #aside-outline-before>
+            <!--            My custom sidebar top content-->
+            <!--            <router-view></router-view>-->
+          </template>
+        </Layout>
+      </n-message-provider>
+    </n-config-provider>
+  </router-view>
 </template>

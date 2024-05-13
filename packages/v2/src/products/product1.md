@@ -6,6 +6,10 @@ layout: home
 
 ## Overview
 
+- [home](/home){target="_self"}
+- [demo](/demo){target="_self"}
+- [Link to pure.html](/pure.html){target="_self"}
+
 <product-page/>
 
 ## DownLoad
@@ -24,6 +28,8 @@ layout: home
 
 <w-help></w-help>
 
+
+<n-back-top />
 
 <script setup>
 // prettier-ignore
