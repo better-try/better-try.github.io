@@ -1,26 +1,24 @@
 <template>
   <div>
-    <div class="q-pa-lg">
-      <q-carousel
-        v-model="slide"
-        :autoplay="autoplay"
-        animated
-        arrows
-        infinite
-        padding
-        thumbnails
-        @mouseenter="autoplay = false"
-        @mouseleave="autoplay = true"
-      >
-        <q-carousel-slide
-          v-for="img in images"
-          :key="img"
-          :img-src="img"
-          :name="img"
-          class="q-pa-md"
-        />
-      </q-carousel>
-    </div>
+    <!--    <div class="q-pa-lg">-->
+    <!--      <q-carousel-->
+    <!--        v-model="slide"-->
+    <!--        :autoplay="autoplay"-->
+    <!--        animated-->
+    <!--        arrows-->
+    <!--        infinite-->
+    <!--        padding-->
+    <!--        thumbnails-->
+    <!--      >-->
+    <!--        <q-carousel-slide-->
+    <!--          v-for="img in images"-->
+    <!--          :key="img"-->
+    <!--          :img-src="img"-->
+    <!--          :name="img"-->
+    <!--          class="q-pa-md"-->
+    <!--        />-->
+    <!--      </q-carousel>-->
+    <!--    </div>-->
 
     <!--      todo x: 布局控制-->
     <n-flex justify="center">
@@ -42,7 +40,6 @@
 </template>
 
 <script lang="ts" setup>
-import { QCarousel, QCarouselSlide } from 'quasar'
 import { ref } from 'vue'
 
 const props = defineProps({
