@@ -31,6 +31,8 @@ import {
 } from 'quasar' // Import icon libraries
 import '@quasar/extras/material-icons/material-icons.css' // Import Quasar css
 import 'quasar/src/css/index.sass'
+import { createI18n } from 'vue-i18n'
+import messages from '../../src/i18n'
 
 export default {
   extends: DefaultTheme,
@@ -85,5 +87,16 @@ export default {
         },
       }
     )
+
+    //
+    // i18n
+    //
+    const i18n = createI18n({
+      locale: 'en-US',
+      fallbackLocale: 'en-US',
+      legacy: false,
+      messages,
+    })
+    app.use(i18n)
   },
 } satisfies Theme

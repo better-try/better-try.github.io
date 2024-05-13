@@ -5,6 +5,7 @@ import { inBrowser, useData } from 'vitepress'
 import { watchEffect } from 'vue'
 import { darkTheme, lightTheme } from 'naive-ui'
 import { useQuasar } from 'quasar'
+import { useI18n } from 'vue-i18n'
 
 // const isDark = ref(false)
 // isDark.value = useColorMode().value === 'dark';
@@ -16,16 +17,27 @@ import { useQuasar } from 'quasar'
 const { isDark } = useData()
 const { lang } = useData()
 const $q = useQuasar()
+const { locale } = useI18n({ useScope: 'global' })
 
 watchEffect(() => {
   //
-  // todo x: fix: dark mode change
+  // todo x: fix for quasar, dark mode change
   //
   $q.dark.set(isDark.value)
+
+  //
+  // todo x: fix i18n for quasar, need update locale
+  //
+  locale.value = lang.value
+  // console.log('lang: ', lang.value)
+  console.log('update i18n locale: ', locale.value)
 
   if (inBrowser) {
     document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2050 00:00:00 UTC; path=/`
   }
+
+  // change language
+  document.documentElement.lang = lang.value
 })
 </script>
 

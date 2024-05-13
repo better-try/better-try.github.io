@@ -44,6 +44,9 @@
         <q-tab-panel name="desc">
           <n-gradient-text type="warning">
             <n-ellipsis expand-trigger="click" line-clamp="13">
+              {{ $t('app.copyright') }} <br />
+              {{ $t('app.type') }} <br />
+
               电灯熄灭 物换星移 泥牛入海<br />
               黑暗好像 一颗巨石 按在胸口<br />
               黑暗好像 一颗巨石 按在胸口<br />
