@@ -35,8 +35,8 @@
           label="Pricing"
           name="pricing"
         />
-        <q-tab class="text-red-5" icon="key" label="License" name="license" />
-        <q-tab class="text-orange-3" icon="help" label="Help" name="help" />
+        <q-tab class="text-red-5" icon="key" label="License" name="license"/>
+        <q-tab class="text-orange-3" icon="help" label="Help" name="help"/>
       </q-tabs>
 
       <!--      tab views -->
@@ -44,17 +44,18 @@
         <q-tab-panel name="desc">
           <n-gradient-text type="warning">
             <n-ellipsis expand-trigger="click" line-clamp="13">
-              {{ $t('app.copyright') }} <br />
-              {{ $t('app.type') }} <br />
+              {{ $t('app.copyright') }} <br/>
+              {{ $t('app.type') }} <br/>
 
-              电灯熄灭 物换星移 泥牛入海<br />
-              黑暗好像 一颗巨石 按在胸口<br />
-              黑暗好像 一颗巨石 按在胸口<br />
-              独脚大盗 百万富翁 摸爬滚打<br />
-              电灯熄灭 物换星移 泥牛入海<br />
-              黑暗好像 一颗巨石 按在胸口<br />
-              独脚大盗 百万富翁 摸爬滚打<br />
-              黑暗好像 一颗巨石 按在胸口
+              <br/>
+              电灯熄灭 物换星移 泥牛入海<br/>
+              黑暗好像 一颗巨石 按在胸口<br/>
+              黑暗好像 一颗巨石 按在胸口<br/>
+              独脚大盗 百万富翁 摸爬滚打<br/>
+              电灯熄灭 物换星移 泥牛入海<br/>
+              黑暗好像 一颗巨石 按在胸口<br/>
+              独脚大盗 百万富翁 摸爬滚打<br/>
+              黑暗好像 一颗巨石 按在胸口<br/>
             </n-ellipsis>
           </n-gradient-text>
 
@@ -92,8 +93,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useMessage } from 'naive-ui'
+import {ref} from 'vue'
+import {useMessage} from 'naive-ui'
 import WScreenshots from '../components/WScreenshots.vue'
 import WDownload from '../components/WDownload.vue'
 import WPricing from '../components/WPricing.vue'
